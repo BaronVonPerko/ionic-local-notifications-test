@@ -1,5 +1,5 @@
 angular.module('localNotifications')
-.service('DemoService', function($ionicPlatform, $cordovaLocalNotification) {
+.service('DemoService', function($cordovaLocalNotification) {
 
   this.showNotification = function(title, text) {
     $cordovaLocalNotification.schedule({

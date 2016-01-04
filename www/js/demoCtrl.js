@@ -1,8 +1,9 @@
 angular.module('localNotifications')
-.controller('DemoCtrl', function($cordovaLocalNotification, $ionicPlatform, DemoService) {
+.controller('DemoCtrl', function(DemoService) {
 
   this.showNotification = function() {
     DemoService.showNotification('Notify!', 'This is a test!');
-  };
+  }
+
 
 });
