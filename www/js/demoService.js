@@ -1,11 +1,15 @@
 angular.module('localNotifications')
 .service('DemoService', function($cordovaLocalNotification) {
 
+  var icon = 'res://drawable-ldpi/icon';
+
   this.showNotification = function(title, text) {
     $cordovaLocalNotification.schedule({
       id: 1,
       title: title,
-      text: text
+      text: text,
+      icon: icon,
+      smallIcon: icon
     });
   };
 
@@ -17,7 +21,9 @@ angular.module('localNotifications')
       id: 2,
       title: title,
       text: text,
-      at: schedule
+      at: schedule,
+      icon: icon,
+      smallIcon: icon
     });
   };
 
@@ -27,7 +33,8 @@ angular.module('localNotifications')
       title: title,
       text: text,
       every: 'day',
-      at: schedule
+      icon: icon,
+      smallIcon: icon
     });
   };
 
